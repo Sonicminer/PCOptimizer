@@ -1,0 +1,15 @@
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/bin/Release/net8.0/UltimateWindowsOptimizer.Tweaks.deps.json
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/bin/Release/net8.0/UltimateWindowsOptimizer.Tweaks.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/bin/Release/net8.0/UltimateWindowsOptimizer.Tweaks.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/bin/Release/net8.0/UltimateWindowsOptimizer.Core.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/bin/Release/net8.0/UltimateWindowsOptimizer.Core.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/UltimateWindowsOptimizer.Tweaks.csproj.AssemblyReference.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/UltimateWindowsOptimizer.Tweaks.GeneratedMSBuildEditorConfig.editorconfig
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/UltimateWindowsOptimizer.Tweaks.AssemblyInfoInputs.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/UltimateWindowsOptimizer.Tweaks.AssemblyInfo.cs
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/UltimateWindowsOptimizer.Tweaks.csproj.CoreCompileInputs.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/Ultimate.8AF89D4D.Up2Date
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/UltimateWindowsOptimizer.Tweaks.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/refint/UltimateWindowsOptimizer.Tweaks.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/UltimateWindowsOptimizer.Tweaks.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Tweaks/obj/Release/net8.0/ref/UltimateWindowsOptimizer.Tweaks.dll

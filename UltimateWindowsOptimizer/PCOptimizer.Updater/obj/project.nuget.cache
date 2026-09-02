@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "q6UoYl7PB00=",
+  "success": true,
+  "projectFilePath": "/home/workdir/artifacts/UltimateWindowsOptimizer/PCOptimizer.Updater/PCOptimizer.Updater.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/microsoft.net.illink.tasks/8.0.30/microsoft.net.illink.tasks.8.0.30.nupkg.sha512",
+    "/root/.nuget/packages/system.configuration.configurationmanager/10.0.11/system.configuration.configurationmanager.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.diagnostics.eventlog/10.0.11/system.diagnostics.eventlog.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.diagnostics.performancecounter/10.0.11/system.diagnostics.performancecounter.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.security.cryptography.protecteddata/10.0.11/system.security.cryptography.protecteddata.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.threading.accesscontrol/10.0.11/system.threading.accesscontrol.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.AssemblyInfoInputs.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.AssemblyInfo.cs
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.csproj.CoreCompileInputs.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/bin/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.deps.json
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/bin/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/bin/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/bin/Release/net8.0/UltimateWindowsOptimizer.Core.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/bin/Release/net8.0/UltimateWindowsOptimizer.Core.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.csproj.AssemblyReference.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/Ultimate.7774E2D9.Up2Date
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/refint/UltimateWindowsOptimizer.Infrastructure.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/UltimateWindowsOptimizer.Infrastructure.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/obj/Release/net8.0/ref/UltimateWindowsOptimizer.Infrastructure.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/bin/Release/net8.0/UltimateWindowsOptimizer.Update.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Infrastructure/bin/Release/net8.0/UltimateWindowsOptimizer.Update.pdb

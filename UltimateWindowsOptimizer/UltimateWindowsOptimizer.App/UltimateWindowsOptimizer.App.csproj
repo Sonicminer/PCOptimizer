@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <AssemblyName>UltimateWindowsOptimizer</AssemblyName>
+    <RootNamespace>UltimateWindowsOptimizer.App</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Ultimate Windows Optimizer</Authors>
+    <Description>Professional Windows Optimization, Diagnostics, Gaming, Maintenance &amp; System Control Suite</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UltimateWindowsOptimizer.Core\UltimateWindowsOptimizer.Core.csproj" />
+    <ProjectReference Include="..\UltimateWindowsOptimizer.Infrastructure\UltimateWindowsOptimizer.Infrastructure.csproj" />
+    <ProjectReference Include="..\UltimateWindowsOptimizer.Tweaks\UltimateWindowsOptimizer.Tweaks.csproj" />
+    <ProjectReference Include="..\UltimateWindowsOptimizer.Update\UltimateWindowsOptimizer.Update.csproj" />
+  </ItemGroup>
+</Project>

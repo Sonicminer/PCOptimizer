@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "1wAkiLVrhBw=",
+  "success": true,
+  "projectFilePath": "/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/UltimateWindowsOptimizer.Core.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/system.configuration.configurationmanager/10.0.11/system.configuration.configurationmanager.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.diagnostics.eventlog/10.0.11/system.diagnostics.eventlog.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.diagnostics.performancecounter/10.0.11/system.diagnostics.performancecounter.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.security.cryptography.protecteddata/10.0.11/system.security.cryptography.protecteddata.10.0.11.nupkg.sha512",
+    "/root/.nuget/packages/system.threading.accesscontrol/10.0.11/system.threading.accesscontrol.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

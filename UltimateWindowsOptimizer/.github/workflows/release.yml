@@ -1,0 +1,163 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version (e.g. 1.2.0)'
+        required: true
+      channel:
+        description: 'Update channel'
+        required: true
+        default: 'stable'
+        type: choice
+        options:
+          - stable
+          - beta
+          - nightly
+
+permissions:
+  contents: write
+
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  DOTNET_NOLOGO: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Determine version
+        id: ver
+        shell: pwsh
+        run: |
+          if ("${{ github.event_name }}" -eq "workflow_dispatch") {
+            $v = "${{ github.event.inputs.version }}"
+            $ch = "${{ github.event.inputs.channel }}"
+          } else {
+            $v = "${{ github.ref_name }}".TrimStart('v')
+            $ch = "stable"
+            if ($v -match "-beta") { $ch = "beta" }
+            if ($v -match "-nightly") { $ch = "nightly" }
+            $v = $v -replace "-.*$", ""
+          }
+          echo "version=$v" >> $env:GITHUB_OUTPUT
+          echo "channel=$ch" >> $env:GITHUB_OUTPUT
+          Write-Host "Version=$v Channel=$ch"
+
+      - name: Restore
+        run: dotnet restore UltimateWindowsOptimizer.sln
+
+      - name: Build
+        run: dotnet build UltimateWindowsOptimizer.sln -c Release --no-restore -p:Version=${{ steps.ver.outputs.version }}
+
+      - name: Test
+        run: |
+          if (Test-Path tests) {
+            dotnet test tests --no-build -c Release --verbosity normal
+          } else {
+            Write-Host "No tests project yet – skipping"
+          }
+        shell: pwsh
+
+      - name: Publish application
+        run: |
+          dotnet publish UltimateWindowsOptimizer.App/UltimateWindowsOptimizer.App.csproj `
+            -c Release -r win-x64 --self-contained false `
+            -o artifacts/publish/app `
+            -p:Version=${{ steps.ver.outputs.version }} `
+            -p:AssemblyName=PCOptimizer
+        shell: pwsh
+
+      - name: Publish updater
+        run: |
+          dotnet publish PCOptimizer.Updater/PCOptimizer.Updater.csproj `
+            -c Release -r win-x64 --self-contained false `
+            -o artifacts/publish/updater `
+            -p:Version=${{ steps.ver.outputs.version }}
+          Copy-Item artifacts/publish/updater/PCOptimizer.Updater* artifacts/publish/app/ -Force -ErrorAction SilentlyContinue
+        shell: pwsh
+
+      - name: Create package & checksums
+        id: pkg
+        shell: pwsh
+        run: |
+          $ver = "${{ steps.ver.outputs.version }}"
+          $ch  = "${{ steps.ver.outputs.channel }}"
+          New-Item -ItemType Directory -Force -Path artifacts/package | Out-Null
+          $zip = "artifacts/package/PCOptimizer-$ver.zip"
+          Compress-Archive -Path "artifacts/publish/app\*" -DestinationPath $zip
+          $sha = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$sha  PCOptimizer-$ver.zip" | Set-Content artifacts/package/SHA256SUMS.txt
+          $manifestName = switch ($ch) {
+            "beta" { "latest-beta.json" }
+            "nightly" { "latest-nightly.json" }
+            default { "latest.json" }
+          }
+          @{
+            version = $ver
+            channel = $ch
+            releaseDate = (Get-Date).ToUniversalTime().ToString("o")
+            downloadUrl = "https://github.com/${{ github.repository }}/releases/download/v$ver/PCOptimizer-$ver.zip"
+            sha256 = $sha
+            signature = $null
+            releaseNotes = "See release notes below."
+            minimumWindowsVersion = "10.0.19041"
+            mandatory = $false
+            fileSizeBytes = (Get-Item $zip).Length
+            installerUrl = "https://github.com/${{ github.repository }}/releases/download/v$ver/PCOptimizerSetup.exe"
+          } | ConvertTo-Json | Set-Content "artifacts/package/$manifestName"
+          echo "sha=$sha" >> $env:GITHUB_OUTPUT
+          echo "zip=PCOptimizer-$ver.zip" >> $env:GITHUB_OUTPUT
+
+      - name: Code signing (optional)
+        if: ${{ env.SIGNING_CERT_BASE64 != '' }}
+        env:
+          SIGNING_CERT_BASE64: ${{ secrets.SIGNING_CERT_BASE64 }}
+          SIGNING_CERT_PASSWORD: ${{ secrets.SIGNING_CERT_PASSWORD }}
+        shell: pwsh
+        run: |
+          # Decode cert from secret, sign with signtool – see SIGNING.md
+          Write-Host "Signing configured but optional step – implement when certificate is available."
+
+      - name: Install Inno Setup
+        run: choco install innosetup -y --no-progress
+        continue-on-error: true
+
+      - name: Build installer
+        shell: pwsh
+        run: |
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          if (Test-Path $iscc) {
+            $ver = "${{ steps.ver.outputs.version }}"
+            $iss = Get-Content installer/PCOptimizer.iss -Raw
+            $iss = $iss -replace '#define MyAppVersion "[\d.]+"', "#define MyAppVersion `"$ver`""
+            $temp = "$env:TEMP\PCOptimizer.iss"
+            $iss | Set-Content $temp
+            & $iscc $temp
+          } else {
+            Write-Host "Inno Setup not available – skipping installer"
+          }
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: PCOptimizer v${{ steps.ver.outputs.version }}
+          draft: false
+          generate_release_notes: true
+          files: |
+            artifacts/package/*
+            artifacts/installer/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

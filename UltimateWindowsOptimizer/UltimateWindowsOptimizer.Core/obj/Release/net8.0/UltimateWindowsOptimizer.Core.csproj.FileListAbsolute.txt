@@ -1,0 +1,12 @@
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/bin/Release/net8.0/UltimateWindowsOptimizer.Core.deps.json
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/bin/Release/net8.0/UltimateWindowsOptimizer.Core.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/bin/Release/net8.0/UltimateWindowsOptimizer.Core.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/UltimateWindowsOptimizer.Core.csproj.AssemblyReference.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/UltimateWindowsOptimizer.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/UltimateWindowsOptimizer.Core.AssemblyInfoInputs.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/UltimateWindowsOptimizer.Core.AssemblyInfo.cs
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/UltimateWindowsOptimizer.Core.csproj.CoreCompileInputs.cache
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/UltimateWindowsOptimizer.Core.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/refint/UltimateWindowsOptimizer.Core.dll
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/UltimateWindowsOptimizer.Core.pdb
+/home/workdir/artifacts/UltimateWindowsOptimizer/UltimateWindowsOptimizer.Core/obj/Release/net8.0/ref/UltimateWindowsOptimizer.Core.dll
